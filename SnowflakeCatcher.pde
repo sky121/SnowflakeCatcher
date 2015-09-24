@@ -30,6 +30,7 @@ bob[k].show();
 }
 void mouseDragged()
 {
+  stroke(0,0,255);
   fill(0,0,255);
   ellipse(mouseX,mouseY,15,15);
   //your code here
@@ -38,10 +39,11 @@ void mouseDragged()
 class Snowflake
 {
   //class member variable declarations
-  int x, y;
+  int x, y, rand;
   boolean isMoving;
   Snowflake()
   {
+    rand = (int)(Math.random()*20);
      x = (int)(Math.random()*500);
      y = (int)(Math.random()*500);
    
@@ -50,13 +52,14 @@ class Snowflake
   }
   void show()
   {
-    fill(255,0,0);
-    ellipse(x,y,5,5);
+     stroke(0,0,0);
+    fill(255,255,255);
+    ellipse(x,y,rand,rand);
     //your code here
   }
   void lookDown()
   {
-    if(y<600 && y>0 && get(x,y+8)==color(0,0,255)){
+    if(y<600 && y>0 && get(x,y+rand+3)==color(0,0,255)){
     isMoving = false;
     }
     //your code here
@@ -65,7 +68,7 @@ class Snowflake
   {
     
     fill(0,0,0);
-   ellipse(x,y,7,7);
+   ellipse(x,y,rand+2,rand+2);
     //your code here
   }
   void move()
