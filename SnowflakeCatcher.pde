@@ -32,7 +32,7 @@ void mouseDragged()
 {
   stroke(0,0,255);
   fill(0,0,255);
-  ellipse(mouseX,mouseY,15,15);
+  line(pmouseX,pmouseY,mouseX,mouseY);
   //your code here
 }
 
@@ -87,5 +87,3 @@ class Snowflake
     //your code here
   }
 }
-
-
