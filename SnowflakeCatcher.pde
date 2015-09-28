@@ -5,7 +5,7 @@ void setup()
   background(0,0,0);
   size(500,500);
   
-  bob = new Snowflake[200];
+  bob = new Snowflake[100];
   for(int i =0; i<bob.length; i++){
     bob[i] = new Snowflake();
   }
