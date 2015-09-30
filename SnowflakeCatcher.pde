@@ -66,7 +66,7 @@ class Snowflake
   }
   void erase()
   {
-    
+    stroke(0,0,0);
     fill(0,0,0);
    ellipse(x,y,rand+2,rand+2);
     //your code here
@@ -80,7 +80,7 @@ class Snowflake
   }
   void wrap()
   {
-    if(y>400){
+    if(y>450){
     y=10;
     x=(int)(Math.random()*500);
     }
